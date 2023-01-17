@@ -3,12 +3,12 @@ import React from 'react'
 const Project = ({ img, title, description, languages, github_url, production_url }) => {
   return (
     <li>
-      <div className='flex justify-center items-center flex-col rounded-md p-7 bg-primary-bg'>
+      <div className='flex flex-col h-full rounded-md p-7 bg-primary-bg'>
         <img src='' alt='project_image'></img>
         <h3>{title}</h3>
-        <p>{description}</p>
+        <p className='xl:min-h-fit md:min-h-[72px]'>{description}</p>
         <hr></hr>
-        <div className='flex flex-wrap gap-1 justify-start'>
+        <div className='flex flex-wrap gap-1 md:my-auto'>
           {languages.map((language, index) => {
             return (
               <span key={index} className='p-2 rounded-md bg-primary'>
