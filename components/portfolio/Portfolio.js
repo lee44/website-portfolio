@@ -8,7 +8,7 @@ const Portfolio = () => {
       {projects.map((project, index, array) => {
         return (
           <Project
-            img={''}
+            img={project.img}
             title={project.title}
             description={project.description}
             languages={project.language}

@@ -17,21 +17,21 @@ export default function Home() {
       <header className='bg-primary-bg'>
         <Nav />
       </header>
-      <main className=''>
-        <section className='container'>
+      <main className='container'>
+        <section className=''>
           <h1>Title</h1>
           <h6>Web Software Developer</h6>
           <hr className='h-4 my-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0'></hr>
           <SocialBar />
         </section>
-        <section className='container'>
+        <section className=''>
           <Skills />
         </section>
-        <section className='container'>
+        <section className=''>
           <Portfolio />
         </section>
       </main>
-      <footer ></footer>
+      <footer></footer>
     </>
   )
 }

@@ -1,12 +1,15 @@
 import React from 'react'
+import Image from 'next/image'
 
 const Project = ({ img, title, description, languages, github_url, production_url }) => {
   return (
     <li>
       <div className='flex flex-col h-full rounded-md p-7 bg-primary-bg'>
-        <img src='' alt='project_image'></img>
+        <div className='relative w-full h-56'>
+          <Image className='rounded-md' src={img} alt={description} fill />
+        </div>
         <h3>{title}</h3>
-        <p className='xl:min-h-fit md:min-h-[72px]'>{description}</p>
+        <p className='xl:min-h-fit md:min-h-[72px] my-0'>{description}</p>
         <hr></hr>
         <div className='flex flex-wrap gap-1 md:my-auto'>
           {languages.map((language, index) => {
