@@ -4,7 +4,7 @@ import { projects } from './data'
 
 const Portfolio = () => {
   return (
-    <ul className='grid xl:grid-cols-3 md:grid-cols-2 md:auto-rows-fr gap-10'>
+    <ul className='grid xl:grid-cols-3 md:grid-cols-2 md:auto-rows-fr lg:gap-10 gap-5 justify-center'>
       {projects.map((project, index, array) => {
         return (
           <Project

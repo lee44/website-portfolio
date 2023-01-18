@@ -17,7 +17,7 @@ export default function Home() {
       <header className='bg-primary-bg'>
         <Nav />
       </header>
-      <main className='container'>
+      <main className='md:container px-8'>
         <section className=''>
           <h1>Title</h1>
           <h6>Web Software Developer</h6>
