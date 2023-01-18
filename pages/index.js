@@ -23,7 +23,7 @@ export default function Home() {
         <section className=''>
           <Title />
           <hr className='h-4 my-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0'></hr>
-          <SocialBar />
+          <SocialBar direction={'horizontal'} showLinks={false} />
         </section>
         <section className=''>
           <Skills />
