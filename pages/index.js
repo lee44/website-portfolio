@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import React from 'react'
-import SocialBar from '../components/social/SocialBar'
-import Skills from '../components/skills/Skills'
-import Nav from '../components/nav/Navigation'
-import Portfolio from '../components/portfolio/Portfolio'
-import Title from '../components/title/Title'
+import SocialBar from '../components/social/socialBar'
+import Skills from '../components/skills/skills'
+import Nav from '../components/nav/navigation'
+import Portfolio from '../components/portfolio/portfolio'
+import Title from '../components/title/title'
 import Contact from '../components/contact/contact'
 
 export default function Home() {

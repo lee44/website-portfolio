@@ -1,6 +1,6 @@
 import React from 'react'
-import SubTitle from '../title/SubTitle'
-import SkillIcon from './SkillIcon'
+import SubTitle from '../title/subTitle'
+import SkillIcon from './skillIcon'
 
 export default function Skills() {
   return (

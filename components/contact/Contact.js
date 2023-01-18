@@ -1,13 +1,13 @@
 import React from 'react'
-import SubTitle from '../title/SubTitle'
-import Message from './Message'
-import Social from './Social'
+import SubTitle from '../title/subTitle'
+import Message from './message'
+import Social from './social'
 
 const Contact = () => {
   return (
     <>
       <SubTitle subtitle={'Contact'} />
-      <div className='grid md:grid-cols-[max-w-lg,max-w-lg] md:auto-rows-fr gap-5 justify-center'>
+      <div className='grid md:grid-cols-2 md:auto-rows-fr lg:gap-10 md:gap-5 gap-7 justify-center'>
         <Message />
         <Social />
       </div>

@@ -32,7 +32,7 @@ const SocialBar = ({ direction, showLinks }) => {
             {showLinks ? (
               <div className='flex gap-x-3'>
                 {value.icon}
-                <span className='flex items-center hover:text-primary-hover'>{value.url}</span>
+                <div className='flex basis-0 items-center hover:text-primary-hover'>{value.url}</div>
               </div>
             ) : (
               <>{value.icon}</>

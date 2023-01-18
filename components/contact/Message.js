@@ -3,7 +3,7 @@ import React from 'react'
 const Message = () => {
   return (
     <>
-      <div className='p-5 bg-primary-bg rounded-md'>
+      <div className='max-w-lg md:justify-self-end p-5 bg-primary-bg rounded-md'>
         <h3 className='text-primary mt-0'>Send Me A Message</h3>
         <hr />
         <form className='w-full'>
