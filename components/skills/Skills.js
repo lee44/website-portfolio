@@ -1,10 +1,11 @@
 import React from 'react'
+import SubTitle from '../title/SubTitle'
 import SkillIcon from './SkillIcon'
 
 export default function Skills() {
   return (
     <>
-      <h1>Skills</h1>
+      <SubTitle subtitle={'Skills'} />
       <ul className='grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4'>
         <SkillIcon name={'HTML5'} color={''} />
         <SkillIcon name={'CSS'} color={''} />

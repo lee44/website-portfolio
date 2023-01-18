@@ -4,6 +4,8 @@ import SocialBar from '../components/social/SocialBar'
 import Skills from '../components/skills/Skills'
 import Nav from '../components/nav/Navigation'
 import Portfolio from '../components/portfolio/Portfolio'
+import Title from '../components/title/Title'
+import Contact from '../components/contact/contact'
 
 export default function Home() {
   return (
@@ -19,8 +21,7 @@ export default function Home() {
       </header>
       <main className='md:container px-8'>
         <section className=''>
-          <h1>Title</h1>
-          <h6>Web Software Developer</h6>
+          <Title />
           <hr className='h-4 my-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0'></hr>
           <SocialBar />
         </section>
@@ -29,6 +30,9 @@ export default function Home() {
         </section>
         <section className=''>
           <Portfolio />
+        </section>
+        <section className=''>
+          <Contact />
         </section>
       </main>
       <footer></footer>
