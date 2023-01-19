@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Menu = ({ menu, toggleMenu }) => {
+const Menu = ({ menu, toggleMenu, scrollToHome, scrollToAbout, scrollToSkills, scrollToPortfolio, scrollToContact }) => {
   return (
     <div className={`${menu ? 'flex' : 'hidden'} flex-col justify-center w-screen h-screen top-0 left-0 px-8 bg-primary-bg z-[99] fixed`}>
       <button type='button' className='text-white rounded-md p-2 flex items-center justify-end' onClick={toggleMenu}>
@@ -9,22 +9,57 @@ const Menu = ({ menu, toggleMenu }) => {
         </svg>
       </button>
       <ol className='flex flex-col'>
-        <li className=''>
+        <li
+          className='cursor-pointer'
+          onClick={() => {
+            toggleMenu()
+            scrollToHome()
+          }}
+        >
           <h1>Home</h1>
         </li>
-        <li className=''>
+        <li
+          className='cursor-pointer'
+          onClick={() => {
+            toggleMenu()
+            scrollToAbout()
+          }}
+        >
           <h1>About</h1>
         </li>
-        <li className=''>
+        <li
+          className='cursor-pointer'
+          onClick={() => {
+            toggleMenu()
+            scrollToSkills()
+          }}
+        >
           <h1>Skills</h1>
         </li>
-        <li className=''>
+        <li
+          className='cursor-pointer'
+          onClick={() => {
+            toggleMenu()
+            scrollToPortfolio()
+          }}
+        >
           <h1>Portfolio</h1>
         </li>
-        <li className=''>
+        <li
+          className='cursor-pointer'
+          onClick={() => {
+            toggleMenu()
+            scrollToContact()
+          }}
+        >
           <h1>Contact</h1>
         </li>
-        <li className=''>
+        <li
+          className='cursor-pointer'
+          onClick={() => {
+            toggleMenu()
+          }}
+        >
           <h1>Resume</h1>
         </li>
       </ol>
