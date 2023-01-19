@@ -47,21 +47,21 @@ export default function Home() {
         />
       </header>
       <main className='md:container px-8'>
-        <section className='' ref={homeRef}>
+        <section className='scroll-mt-20' ref={homeRef}>
           <Title />
           <hr className='h-4 my-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0'></hr>
           <SocialBar direction={'horizontal'} showLinks={false} />
         </section>
-        <section className='' ref={aboutRef}>
+        <section className='scroll-mt-20' ref={aboutRef}>
           <Timeline />
         </section>
-        <section className='' ref={skillsRef}>
+        <section className='scroll-mt-20' ref={skillsRef}>
           <Skills />
         </section>
-        <section className='' ref={portfolioRef}>
+        <section className='scroll-mt-20' ref={portfolioRef}>
           <Portfolio />
         </section>
-        <section className='' ref={contactRef}>
+        <section className='scroll-mt-20' ref={contactRef}>
           <Contact />
         </section>
       </main>
