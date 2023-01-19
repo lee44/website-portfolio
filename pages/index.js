@@ -6,6 +6,7 @@ import Nav from '../components/nav/navigation'
 import Portfolio from '../components/portfolio/portfolio'
 import Title from '../components/title/title'
 import Contact from '../components/contact/contact'
+import Timeline from '../components/timeline/timeline'
 
 export default function Home() {
   return (
@@ -24,6 +25,9 @@ export default function Home() {
           <Title />
           <hr className='h-4 my-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0'></hr>
           <SocialBar direction={'horizontal'} showLinks={false} />
+        </section>
+        <section className=''>
+          <Timeline />
         </section>
         <section className=''>
           <Skills />
