@@ -25,9 +25,9 @@ const SocialBar = ({ direction, showLinks }) => {
   }
 
   return (
-    <ol className={`flex ${direction == 'vertical' ? 'flex-col' : 'justify-center space-x-4'} `}>
+    <ol className={`flex ${direction == 'vertical' ? 'flex-col flex-1 justify-between' : 'justify-center space-x-4'} `}>
       {Object.entries(socialLinks).map(([key, value], index) => (
-        <li key={index} className='pb-2'>
+        <li key={index} className='pb-2 '>
           <a href={value.url}>
             {showLinks ? (
               <div className='flex gap-x-3'>
