@@ -44,6 +44,12 @@
   }
 }
 
+@layer base {
+  html {
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
 :root {}
 
 * {
@@ -58,8 +64,13 @@ body {
 }
 
 section {
-  /* height: 100vh; */
+  min-height: 100vh;
   margin: 5rem 0;
+}
+
+section:first-child {
+  min-height: calc(100vh - 56px);
+  margin: 56px 0 0 0;
 }
 
 hr {
