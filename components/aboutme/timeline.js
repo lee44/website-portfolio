@@ -1,5 +1,5 @@
 import React from 'react'
-import Card from '../card/card'
+import Card from '../ui/card'
 import SubTitle from '../title/subTitle'
 import { events } from './data'
 import Dot from './dot'

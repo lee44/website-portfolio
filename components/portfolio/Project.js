@@ -1,7 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { FaGithubSquare, FaBroadcastTower } from 'react-icons/fa'
-import Card from '../card/card'
+import Card from '../ui/card'
 
 const Project = ({ img, title, description, languages, github_url, production_url }) => {
   return (

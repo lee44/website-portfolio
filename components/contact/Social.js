@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaFacebookSquare, FaTwitterSquare, FaLinkedin, FaGithubSquare } from 'react-icons/fa'
-import Card from '../card/card'
+import Card from '../ui/card'
 import SocialBar from '../social/socialBar'
 
 const Social = () => {

@@ -6,7 +6,9 @@ const Nav = ({ menu, toggleMenu, scrollToHome, scrollToAbout, scrollToSkills, sc
   return (
     <>
       <nav className='md:container h-14 top-0 px-8 flex justify-between items-center text-white'>
-        <h2 className='bg-gradient-to-r from-violet-500 to-fuchsia-500 text-transparent bg-clip-text'>JL</h2>
+        <h2 className='bg-gradient-to-r from-violet-500 to-fuchsia-500 text-transparent bg-clip-text cursor-pointer' onClick={scrollToHome}>
+          JL
+        </h2>
         <ol className='hidden md:flex h-full'>
           <MenuItem title={'Home'} scrollTo={scrollToHome} />
           <MenuItem title={'About'} scrollTo={scrollToAbout} />
