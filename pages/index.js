@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import SocialBar from '../components/social/socialBar'
 import Skills from '../components/skills/skills'
 import Nav from '../components/nav/navigation'
@@ -9,9 +9,11 @@ import Contact from '../components/contact/contact'
 import AboutMe from '../components/aboutme/aboutme'
 import MenuItem from '../components/nav/menuItem'
 import Menu from '../components/nav/menu'
+import { useSpring } from 'framer-motion'
 
 export default function Home() {
   const [menu, setMenu] = useState(false)
+  const spring = useSpring(0, { duration: 0.5 })
 
   const homeRef = useRef(null)
   const aboutRef = useRef(null)
@@ -19,11 +21,15 @@ export default function Home() {
   const portfolioRef = useRef(null)
   const contactRef = useRef(null)
 
-  const scrollToHome = () => homeRef.current.scrollIntoView()
-  const scrollToAbout = () => aboutRef.current.scrollIntoView()
-  const scrollToSkills = () => skillsRef.current.scrollIntoView()
-  const scrollToPortfolio = () => portfolioRef.current.scrollIntoView()
-  const scrollToContact = () => contactRef.current.scrollIntoView()
+  function moveTo(ref) {
+    spring.set(ref.current.offsetTop)
+  }
+
+  const scrollToHome = () => moveTo(homeRef)
+  const scrollToAbout = () => moveTo(aboutRef)
+  const scrollToSkills = () => moveTo(skillsRef)
+  const scrollToPortfolio = () => moveTo(portfolioRef)
+  const scrollToContact = () => moveTo(contactRef)
 
   const toggleMenu = () => {
     setMenu(!menu)
@@ -49,6 +55,16 @@ export default function Home() {
     />
   )
 
+  useEffect(() => {
+    // Subscribe to any changes reported by motion value
+    const unsubscribeScroll = spring.on('change', (latest) => {
+      window.scrollTo({ left: 0, top: latest - 20, behavior: 'smooth' })
+    })
+    return () => {
+      unsubscribeScroll()
+    }
+  }, [spring])
+
   return (
     <>
       <Head>
@@ -61,23 +77,23 @@ export default function Home() {
         <Nav Menu={menuComponent} menuItems={menuItems} toggleMenu={toggleMenu} scrollToHome={scrollToHome} />
       </header>
       <main className='md:container px-8'>
-        <section className='scroll-mt-20 flex flex-col justify-center' ref={homeRef}>
+        <section className='flex flex-col justify-center' ref={homeRef}>
           <Title />
           <hr className='h-4 my-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0'></hr>
           <SocialBar direction={'horizontal'} showLinks={false} />
         </section>
-        <section className='scroll-mt-20' ref={aboutRef}>
+        <section className='' ref={aboutRef}>
           <AboutMe />
         </section>
-        <section className='scroll-mt-20' ref={skillsRef}>
+        <section className='' ref={skillsRef}>
           <Skills />
         </section>
-        <section className='scroll-mt-20' ref={portfolioRef}>
+        <section className='' ref={portfolioRef}>
           <Portfolio />
         </section>
       </main>
       <footer>
-        <section className='scroll-mt-20' ref={contactRef}>
+        <section className='' ref={contactRef}>
           <Contact />
         </section>
       </footer>

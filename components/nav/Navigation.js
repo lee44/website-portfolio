@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import Menu from './menu'
-import MenuItem from './menuItem'
 
 const Nav = ({ Menu, menuItems, toggleMenu, scrollToHome }) => {
   return (
@@ -11,7 +9,7 @@ const Nav = ({ Menu, menuItems, toggleMenu, scrollToHome }) => {
         </h2>
         <ol className='hidden md:flex h-full'>
           {Object.values(menuItems).map((value, index) => {
-            return value
+            return <li key={index}>{value}</li>
           })}
         </ol>
         <div className='md:hidden space-y-2 cursor-pointer' onClick={toggleMenu}>
