@@ -7,6 +7,8 @@ import Portfolio from '../components/portfolio/portfolio'
 import Title from '../components/title/title'
 import Contact from '../components/contact/contact'
 import AboutMe from '../components/aboutme/aboutme'
+import MenuItem from '../components/nav/menuItem'
+import Menu from '../components/nav/menu'
 
 export default function Home() {
   const [menu, setMenu] = useState(false)
@@ -27,6 +29,26 @@ export default function Home() {
     setMenu(!menu)
   }
 
+  const menuItems = {
+    Home: <MenuItem title={'Home'} scrollTo={scrollToHome} />,
+    AboutMe: <MenuItem title={'About Me'} scrollTo={scrollToAbout} />,
+    Skills: <MenuItem title={'Skills'} scrollTo={scrollToSkills} />,
+    Portfolio: <MenuItem title={'Portfolio'} scrollTo={scrollToPortfolio} />,
+    Contact: <MenuItem title={'Contact'} scrollTo={scrollToContact} />,
+  }
+
+  const menuComponent = (
+    <Menu
+      menu={menu}
+      toggleMenu={toggleMenu}
+      scrollToHome={scrollToHome}
+      scrollToAbout={scrollToAbout}
+      scrollToSkills={scrollToSkills}
+      scrollToPortfolio={scrollToPortfolio}
+      scrollToContact={scrollToContact}
+    />
+  )
+
   return (
     <>
       <Head>
@@ -36,15 +58,7 @@ export default function Home() {
       </Head>
 
       <header className='fixed w-full top-0 z-[99] bg-primary-bg'>
-        <Nav
-          menu={menu}
-          toggleMenu={toggleMenu}
-          scrollToHome={scrollToHome}
-          scrollToAbout={scrollToAbout}
-          scrollToSkills={scrollToSkills}
-          scrollToPortfolio={scrollToPortfolio}
-          scrollToContact={scrollToContact}
-        />
+        <Nav Menu={menuComponent} menuItems={menuItems} toggleMenu={toggleMenu} scrollToHome={scrollToHome} />
       </header>
       <main className='md:container px-8'>
         <section className='scroll-mt-20 flex flex-col justify-center' ref={homeRef}>
