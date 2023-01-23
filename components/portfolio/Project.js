@@ -1,11 +1,12 @@
 import React from 'react'
 import Image from 'next/image'
 import { FaGithubSquare, FaBroadcastTower } from 'react-icons/fa'
+import Card from '../card/card'
 
 const Project = ({ img, title, description, languages, github_url, production_url }) => {
   return (
     <li className='max-w-lg'>
-      <div className='flex flex-col h-full rounded-md p-5 bg-primary-bg'>
+      <Card classes={'flex flex-col h-full'}>
         <div className='relative w-full h-56'>
           <Image className='rounded-md' src={img} alt={description} fill />
         </div>
@@ -36,7 +37,7 @@ const Project = ({ img, title, description, languages, github_url, production_ur
             </div>
           </a>
         </div>
-      </div>
+      </Card>
     </li>
   )
 }

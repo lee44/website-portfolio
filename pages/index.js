@@ -6,7 +6,7 @@ import Nav from '../components/nav/navigation'
 import Portfolio from '../components/portfolio/portfolio'
 import Title from '../components/title/title'
 import Contact from '../components/contact/contact'
-import Timeline from '../components/timeline/timeline'
+import AboutMe from '../components/aboutme/aboutme'
 
 export default function Home() {
   const [menu, setMenu] = useState(false)
@@ -53,7 +53,7 @@ export default function Home() {
           <SocialBar direction={'horizontal'} showLinks={false} />
         </section>
         <section className='scroll-mt-20' ref={aboutRef}>
-          <Timeline />
+          <AboutMe />
         </section>
         <section className='scroll-mt-20' ref={skillsRef}>
           <Skills />
