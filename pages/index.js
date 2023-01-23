@@ -58,7 +58,7 @@ export default function Home() {
   useEffect(() => {
     // Subscribe to any changes reported by motion value
     const unsubscribeScroll = spring.on('change', (latest) => {
-      window.scrollTo({ left: 0, top: latest - 20, behavior: 'smooth' })
+      window.scrollTo({ left: 0, top: latest - 56, behavior: 'smooth' })
     })
     return () => {
       unsubscribeScroll()
