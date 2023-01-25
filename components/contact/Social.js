@@ -6,7 +6,7 @@ import SocialBar from '../social/socialBar'
 const Social = () => {
   return (
     <>
-      <Card classes={'flex flex-col max-w-lg md:justify-self-start'}>
+      <Card classes={'flex flex-col max-w-lg md:justify-self-start'} animation={'fade-left'}>
         <h3 className='text-primary my-0'>Say Hello Here</h3>
         <hr />
         <SocialBar direction={'vertical'} showLinks={true} />

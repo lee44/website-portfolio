@@ -12,7 +12,7 @@ const Timeline = () => {
           if (index % 2 === 0) {
             return (
               <div key={index} className='flex flex-row-reverse md:contents'>
-                <Card classes={'col-start-1 col-end-5 ml-auto sm:my-4 shadow-md'}>
+                <Card classes={'col-start-1 col-end-5 ml-auto sm:my-4 shadow-md'} animation={'fade-left'}>
                   <h5 className='font-semibold text-right my-0 text-primary'>{value.period}</h5>
                   <h4 className='font-semibold text-right'>{value.title}</h4>
                   <p className='leading-tight text-right my-0'>{value.description}</p>
@@ -24,7 +24,7 @@ const Timeline = () => {
             return (
               <div key={index} className='flex md:contents'>
                 <Dot />
-                <Card classes={'col-start-6 col-end-10 mr-auto shadow-md'}>
+                <Card classes={'col-start-6 col-end-10 mr-auto shadow-md'} animation={'fade-right'}>
                   <h5 className='font-semibold text-left my-0 text-primary'>{value.period}</h5>
                   <h4 className='font-semibold text-left'>{value.title}</h4>
                   <p className='leading-tight text-left my-0'>{value.description}</p>

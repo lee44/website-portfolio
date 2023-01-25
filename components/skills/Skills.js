@@ -7,7 +7,7 @@ export default function Skills() {
   return (
     <>
       <SubTitle subtitle={'Skills'} />
-      <Card classes={''}>
+      <Card classes={''} animation={'fade-up'}>
         <ul className='grid xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4'>
           <SkillIcon name={'HTML5'} color={''} />
           <SkillIcon name={'CSS'} color={''} />

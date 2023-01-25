@@ -6,9 +6,9 @@ import Card from '../ui/card'
 const Project = ({ img, title, description, languages, github_url, production_url }) => {
   return (
     <li className='max-w-lg'>
-      <Card classes={'flex flex-col h-full'}>
+      <Card classes={'flex flex-col h-full'} animation={'fade-up'}>
         <div className='relative w-full h-56'>
-          <Image className='rounded-md' src={img} alt={description} fill />
+          <Image className='rounded-md' src={img} alt={description} fill sizes='min-width: 100%;' />
         </div>
         <h3>{title}</h3>
         <p className='xl:min-h-fit md:min-h-[72px] my-0'>{description}</p>

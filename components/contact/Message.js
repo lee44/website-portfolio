@@ -4,7 +4,7 @@ import Card from '../ui/card'
 const Message = () => {
   return (
     <>
-      <Card classes={'flex flex-col max-w-lg md:justify-self-end'}>
+      <Card classes={'flex flex-col max-w-lg md:justify-self-end'} animation={'fade-right'}>
         <h3 className='text-primary my-0'>Send Me A Message</h3>
         <hr />
         <form className='w-full'>
