@@ -1,26 +1,26 @@
 import React from 'react'
 
 const MobileMenu = ({ menu, toggleMenu, scrollToHome, scrollToAbout, scrollToSkills, scrollToPortfolio, scrollToContact }) => {
-  const menuItems = [
+  const menuChoices = [
     {
       name: 'Home',
-      scrollFn: scrollToHome(),
+      scrollFn: scrollToHome,
     },
     {
       name: 'About',
-      scrollFn: scrollToAbout(),
+      scrollFn: scrollToAbout,
     },
     {
       name: 'Skills',
-      scrollFn: scrollToSkills(),
+      scrollFn: scrollToSkills,
     },
     {
       name: 'Portfolio',
-      scrollFn: scrollToPortfolio(),
+      scrollFn: scrollToPortfolio,
     },
     {
       name: 'Contact',
-      scrollFn: scrollToContact(),
+      scrollFn: scrollToContact,
     },
     {
       name: 'Resume',
@@ -45,13 +45,13 @@ const MobileMenu = ({ menu, toggleMenu, scrollToHome, scrollToAbout, scrollToSki
         </svg>
       </button>
       <ol className='flex flex-col'>
-        {menuItems.map((item, index) => (
+        {menuChoices.map((item, index) => (
           <li
             key={index}
             className='cursor-pointer'
             onClick={() => {
               toggleMenu()
-              item.scrollFn
+              item.scrollFn()
             }}
           >
             <h1>{item.name}</h1>

@@ -11,7 +11,7 @@ import MenuItem from '../components/nav/menuItem'
 import MobileMenu from '../components/nav/mobileMenu'
 import { useSpring } from 'framer-motion'
 
-export default function Home() {
+const Home = () => {
   const [menu, setMenu] = useState(false)
   const spring = useSpring(0, { duration: 0.5 })
 
@@ -35,6 +35,7 @@ export default function Home() {
     setMenu(!menu)
   }
 
+  // Composition to prevent prop drilling
   const menuItems = {
     Home: <MenuItem title={'Home'} scrollTo={scrollToHome} />,
     AboutMe: <MenuItem title={'About Me'} scrollTo={scrollToAbout} />,
@@ -51,6 +52,7 @@ export default function Home() {
     ),
   }
 
+  // Composition to prevent prop drilling
   const mobileMenuComponent = (
     <MobileMenu
       menu={menu}
@@ -108,3 +110,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home
