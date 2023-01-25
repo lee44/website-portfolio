@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
 
-const Nav = ({ menu, menuItems, toggleMenu, scrollToHome }) => {
+const Nav = ({ menuItems, scrollToHome }) => {
+  const [menu, setMenu] = useState(false)
+
+  const toggleMenu = () => {
+    setMenu(!menu)
+  }
+
   return (
     <>
       <nav className='md:container h-14 top-0 px-8 flex justify-between items-center text-white'>

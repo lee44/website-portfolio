@@ -11,7 +11,6 @@ import MenuItem from '../components/nav/menuItem'
 import { useSpring } from 'framer-motion'
 
 const Home = () => {
-  const [menu, setMenu] = useState(false)
   const spring = useSpring(0, { duration: 0.5 })
 
   const homeRef = useRef(null)
@@ -30,11 +29,9 @@ const Home = () => {
   const scrollToPortfolio = () => moveTo(portfolioRef)
   const scrollToContact = () => moveTo(contactRef)
 
-  const toggleMenu = () => {
-    setMenu(!menu)
-  }
-
-  // Composition to prevent prop drilling
+  /* 
+    Composition to prevent prop drilling and re-render of MenuItem Component because passing MenuItem as a prop is not rerendered
+  */
   const menuItems = {
     Home: <MenuItem title={'Home'} scrollTo={scrollToHome} />,
     AboutMe: <MenuItem title={'About Me'} scrollTo={scrollToAbout} />,
@@ -70,7 +67,7 @@ const Home = () => {
       </Head>
 
       <header className='fixed w-full top-0 z-[99] bg-primary-bg'>
-        <Nav menu={menu} menuItems={menuItems} toggleMenu={toggleMenu} scrollToHome={scrollToHome} />
+        <Nav menuItems={menuItems} scrollToHome={scrollToHome} />
       </header>
       <main className='md:container px-8'>
         <section className='flex flex-col justify-center' ref={homeRef}>
