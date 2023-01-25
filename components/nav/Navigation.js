@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const Nav = ({ Menu, menuItems, toggleMenu, scrollToHome }) => {
+const Nav = ({ mobileMenu, menuItems, toggleMenu, scrollToHome }) => {
   return (
     <>
       <nav className='md:container h-14 top-0 px-8 flex justify-between items-center text-white'>
@@ -17,7 +17,7 @@ const Nav = ({ Menu, menuItems, toggleMenu, scrollToHome }) => {
           <span className='block w-8 h-1 bg-gradient-to-r from-violet-500 to-fuchsia-500'></span>
           <span className='block w-4 h-1 ml-auto bg-gradient-to-r from-violet-500 to-fuchsia-500'></span>
         </div>
-        {Menu}
+        {mobileMenu}
       </nav>
     </>
   )

@@ -8,7 +8,7 @@ import Title from '../components/title/title'
 import Contact from '../components/contact/contact'
 import AboutMe from '../components/aboutme/aboutme'
 import MenuItem from '../components/nav/menuItem'
-import Menu from '../components/nav/menu'
+import MobileMenu from '../components/nav/mobileMenu'
 import { useSpring } from 'framer-motion'
 
 export default function Home() {
@@ -22,7 +22,7 @@ export default function Home() {
   const contactRef = useRef(null)
 
   function moveTo(ref) {
-    spring.set(ref.current.offsetTop)
+    spring.set(ref.current?.offsetTop)
   }
 
   const scrollToHome = () => moveTo(homeRef)
@@ -41,10 +41,18 @@ export default function Home() {
     Skills: <MenuItem title={'Skills'} scrollTo={scrollToSkills} />,
     Portfolio: <MenuItem title={'Portfolio'} scrollTo={scrollToPortfolio} />,
     Contact: <MenuItem title={'Contact'} scrollTo={scrollToContact} />,
+    Resume: (
+      <MenuItem
+        title={'Resume'}
+        scrollTo={() => {
+          window.open('/resume.pdf', '_blank')
+        }}
+      />
+    ),
   }
 
-  const menuComponent = (
-    <Menu
+  const mobileMenuComponent = (
+    <MobileMenu
       menu={menu}
       toggleMenu={toggleMenu}
       scrollToHome={scrollToHome}
@@ -74,7 +82,7 @@ export default function Home() {
       </Head>
 
       <header className='fixed w-full top-0 z-[99] bg-primary-bg'>
-        <Nav Menu={menuComponent} menuItems={menuItems} toggleMenu={toggleMenu} scrollToHome={scrollToHome} />
+        <Nav mobileMenu={mobileMenuComponent} menuItems={menuItems} toggleMenu={toggleMenu} scrollToHome={scrollToHome} />
       </header>
       <main className='md:container px-8'>
         <section className='flex flex-col justify-center' ref={homeRef}>
