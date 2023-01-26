@@ -56,6 +56,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  overflow-y: hidden;
 }
 
 body {
@@ -76,4 +77,10 @@ section:first-child {
 
 hr {
   margin: 1rem 0;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  max-width: inherit;
 }
