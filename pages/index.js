@@ -85,7 +85,7 @@ const Home = () => {
           <Portfolio />
         </section>
       </main>
-      <footer>
+      <footer className='md:container'>
         <section className='' ref={contactRef}>
           <Contact />
         </section>

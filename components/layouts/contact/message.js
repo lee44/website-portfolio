@@ -4,7 +4,7 @@ import Card from '../../templates/card'
 const Message = () => {
   return (
     <>
-      <Card classes={'flex flex-col max-w-lg md:justify-self-end'} animation={'fade-left'}>
+      <Card classes={'flex flex-col max-w-lg xl:justify-self-end'} animation={'fade-left'}>
         <h3 className='text-primary my-0'>Send Me A Message</h3>
         <hr />
         <form className='w-full'>

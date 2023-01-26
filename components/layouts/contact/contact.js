@@ -7,7 +7,7 @@ const Contact = () => {
   return (
     <>
       <SubTitle subtitle={'Contact'} />
-      <div className='grid md:grid-cols-2 md:auto-rows-fr lg:gap-10 md:gap-5 gap-7 justify-center'>
+      <div className='grid lg:grid-cols-2 auto-rows-fr lg:gap-10 gap-5 justify-center'>
         <Message />
         <Social />
       </div>
