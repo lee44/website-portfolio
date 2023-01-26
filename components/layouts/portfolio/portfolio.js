@@ -11,13 +11,14 @@ const Portfolio = () => {
         {projects.map((project, index, array) => {
           return (
             <Project
+              key={index}
               img={project.img}
               title={project.title}
               description={project.description}
               languages={project.language}
               github_url={project.github_url}
               production_url={project.production_url}
-              key={index}
+              animation={index % 3 === 0 ? 'fade-left' : index % 2 === 0 ? 'fade-right' : 'fade-up'}
             />
           )
         })}

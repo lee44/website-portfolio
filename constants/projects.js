@@ -6,6 +6,7 @@ export const projects = [
     language: ['ReactJS', 'Redux'],
     github_url: 'https://github.com/lee44/Netflix-Clone',
     production_url: 'https://leeflix.netlify.app/',
+    animation: '',
   },
   {
     title: 'Disney+ Clone',
@@ -14,6 +15,7 @@ export const projects = [
     language: ['ReactJS', 'Redux', 'Styled Components'],
     github_url: 'https://github.com/lee44/Disney-Clone',
     production_url: 'https://disney-clone-react.netlify.app/',
+    animation: '',
   },
   {
     title: 'Friday Crud App',

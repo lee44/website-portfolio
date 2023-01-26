@@ -1,12 +1,11 @@
 import React from 'react'
-import { FaFacebookSquare, FaTwitterSquare, FaLinkedin, FaGithubSquare } from 'react-icons/fa'
 import Card from '../../templates/card'
 import SocialBar from '../social/socialBar'
 
 const Social = () => {
   return (
     <>
-      <Card classes={'flex flex-col max-w-lg md:justify-self-start'} animation={'fade-left'}>
+      <Card classes={'flex flex-col max-w-lg md:justify-self-start'} animation={'fade-right'}>
         <h3 className='text-primary my-0'>Say Hello Here</h3>
         <hr />
         <SocialBar direction={'vertical'} showLinks={true} />
