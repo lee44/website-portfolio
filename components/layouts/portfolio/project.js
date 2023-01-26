@@ -5,8 +5,8 @@ import Card from '../../templates/card'
 
 const Project = ({ img, title, description, languages, github_url, production_url, animation }) => {
   return (
-    <li className='max-w-lg'>
-      <Card classes={'flex flex-col h-full'} animation={animation}>
+    <li className='flex justify-center'>
+      <Card classes={'flex flex-col h-full max-w-md'} animation={animation}>
         <div className='relative w-full h-56'>
           <Image className='rounded-md' src={img} alt={description} fill sizes='min-width: 100%;' />
         </div>

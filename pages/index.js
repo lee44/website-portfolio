@@ -69,7 +69,7 @@ const Home = () => {
       <header className='fixed w-full top-0 z-[99] bg-primary-bg'>
         <Nav menuItems={menuItems} scrollToHome={scrollToHome} />
       </header>
-      <main className='md:container px-8'>
+      <main className='md:container'>
         <section className='flex flex-col justify-center' ref={homeRef}>
           <Title />
           <hr className='h-4 my-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0'></hr>
