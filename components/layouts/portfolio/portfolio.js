@@ -7,7 +7,7 @@ const Portfolio = () => {
   return (
     <>
       <SubTitle subtitle={'Portfolio'} />
-      <ul className='grid xl:grid-cols-3 md:grid-cols-2 md:auto-rows-fr lg:gap-10 md:gap-5 gap-7 justify-center'>
+      <ul className='grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 md:auto-rows-fr lg:gap-10 md:gap-5 gap-7'>
         {projects.map((project, index, array) => {
           return (
             <Project

@@ -60,6 +60,7 @@
 
 body {
   background: url("../public/sitebg.jpg") no-repeat center fixed;
+  background-size: cover;
   color: white;
 }
 

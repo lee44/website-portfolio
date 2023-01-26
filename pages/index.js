@@ -66,10 +66,10 @@ const Home = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
 
-      <header className='fixed w-full top-0 z-[99] bg-primary-bg'>
+      <header className='fixed w-screen top-0 z-[99] bg-primary-bg'>
         <Nav menuItems={menuItems} scrollToHome={scrollToHome} />
       </header>
-      <main className='md:container px-8'>
+      <main className='container'>
         <section className='flex flex-col justify-center' ref={homeRef}>
           <Title />
           <hr className='h-4 my-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0'></hr>
@@ -85,7 +85,7 @@ const Home = () => {
           <Portfolio />
         </section>
       </main>
-      <footer>
+      <footer className='container'>
         <section className='' ref={contactRef}>
           <Contact />
         </section>

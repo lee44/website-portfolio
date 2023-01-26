@@ -9,7 +9,7 @@ const Nav = ({ menuItems, scrollToHome }) => {
 
   return (
     <>
-      <nav className='md:container h-14 top-0 px-8 flex justify-between items-center text-white'>
+      <nav className='container h-14 top-0 flex justify-between items-center text-white'>
         <h2 className='bg-gradient-to-r from-violet-500 to-fuchsia-500 text-transparent bg-clip-text cursor-pointer' onClick={scrollToHome}>
           JL
         </h2>
