@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import React, { useEffect, useRef, useState } from 'react'
-import SocialBar from '../components/layouts/social/socialBar'
 import Skills from '../components/layouts/skills/skills'
 import Nav from '../components/layouts/nav/navigation'
 import Title from '../components/layouts/title/title'
@@ -9,6 +8,7 @@ import MenuItem from '../components/templates/menuItem'
 import { useSpring } from 'framer-motion'
 import Portfolio from '../components/layouts/portfolio/portfolio'
 import AboutMe from '../components/layouts/aboutme/aboutme'
+import SocialBar from '../components/layouts/contact/socialbar'
 
 const Home = () => {
   const spring = useSpring(0, { duration: 0.5 })
