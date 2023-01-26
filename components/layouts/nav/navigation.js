@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Nav = ({ menuItems, scrollToHome }) => {
   const [menu, setMenu] = useState(false)
@@ -6,6 +6,14 @@ const Nav = ({ menuItems, scrollToHome }) => {
   const toggleMenu = () => {
     setMenu(!menu)
   }
+
+  useEffect(() => {
+    if (menu) {
+      document.body.style.overflow = 'hidden'
+    } else {
+      document.body.style.overflow = 'auto'
+    }
+  }, [menu])
 
   return (
     <>
