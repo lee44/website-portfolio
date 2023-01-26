@@ -1,7 +1,7 @@
 import React from 'react'
 import Project from './project'
-import { projects } from './data'
-import SubTitle from '../title/subTitle'
+import { projects } from '../../../constants/projects'
+import SubTitle from '../../templates/subTitle'
 
 const Portfolio = () => {
   return (

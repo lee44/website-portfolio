@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 import React from 'react'
-import { animations } from '../animation/animations'
+import { animations } from '../../constants/animations'
 
 const Card = ({ children, classes, animation }) => {
   return (

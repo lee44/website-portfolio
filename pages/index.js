@@ -1,14 +1,14 @@
 import Head from 'next/head'
 import React, { useEffect, useRef, useState } from 'react'
-import SocialBar from '../components/social/socialBar'
-import Skills from '../components/skills/skills'
-import Nav from '../components/nav/navigation'
-import Portfolio from '../components/portfolio/portfolio'
-import Title from '../components/title/title'
-import Contact from '../components/contact/contact'
-import AboutMe from '../components/aboutme/aboutme'
-import MenuItem from '../components/nav/menuItem'
+import SocialBar from '../components/layouts/social/socialBar'
+import Skills from '../components/layouts/skills/skills'
+import Nav from '../components/layouts/nav/navigation'
+import Title from '../components/layouts/title/title'
+import Contact from '../components/layouts/contact/contact'
+import MenuItem from '../components/templates/menuItem'
 import { useSpring } from 'framer-motion'
+import Portfolio from '../components/layouts/portfolio/portfolio'
+import AboutMe from '../components/layouts/aboutme/aboutme'
 
 const Home = () => {
   const spring = useSpring(0, { duration: 0.5 })

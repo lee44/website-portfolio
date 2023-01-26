@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { animations } from '../animation/animations'
+import { animations } from '../../constants/animations'
 
 const SubTitle = ({ subtitle }) => {
   return (

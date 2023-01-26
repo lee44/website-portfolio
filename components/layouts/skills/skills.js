@@ -1,7 +1,7 @@
 import React from 'react'
-import Card from '../ui/card'
-import SubTitle from '../title/subTitle'
-import SkillIcon from './skillIcon'
+import Card from '../../templates/card'
+import SubTitle from '../../templates/subTitle'
+import SkillIcon from '../../templates/skillIcon'
 
 export default function Skills() {
   return (

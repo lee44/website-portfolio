@@ -1,6 +1,6 @@
 import React from 'react'
-import Card from '../ui/card'
-import SubTitle from '../title/subTitle'
+import Card from '../../templates/card'
+import SubTitle from '../../templates/subTitle'
 import Timeline from './timeline'
 
 const AboutMe = () => {

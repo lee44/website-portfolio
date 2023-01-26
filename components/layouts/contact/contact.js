@@ -1,5 +1,5 @@
 import React from 'react'
-import SubTitle from '../title/subTitle'
+import SubTitle from '../../templates/subTitle'
 import Message from './message'
 import Social from './social'
 

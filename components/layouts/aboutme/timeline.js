@@ -1,8 +1,7 @@
 import React from 'react'
-import Card from '../ui/card'
-import SubTitle from '../title/subTitle'
-import { events } from './data'
-import Dot from './dot'
+import Card from '../../templates/card'
+import { events } from '../../../constants/timeline_events'
+import Dot from '../../elements/dot'
 
 const Timeline = () => {
   return (
