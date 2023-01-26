@@ -69,7 +69,7 @@ const Home = () => {
       <header className='fixed w-full top-0 z-[99] bg-primary-bg'>
         <Nav menuItems={menuItems} scrollToHome={scrollToHome} />
       </header>
-      <main className='md:container'>
+      <main className='container'>
         <section className='flex flex-col justify-center' ref={homeRef}>
           <Title />
           <hr className='h-4 my-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0'></hr>
@@ -85,7 +85,7 @@ const Home = () => {
           <Portfolio />
         </section>
       </main>
-      <footer className='md:container'>
+      <footer className='container'>
         <section className='' ref={contactRef}>
           <Contact />
         </section>
