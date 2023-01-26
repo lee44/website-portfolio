@@ -66,7 +66,7 @@ const Home = () => {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
       </Head>
 
-      <header className='fixed w-full top-0 z-[99] bg-primary-bg'>
+      <header className='fixed w-screen top-0 z-[99] bg-primary-bg'>
         <Nav menuItems={menuItems} scrollToHome={scrollToHome} />
       </header>
       <main className='container'>
