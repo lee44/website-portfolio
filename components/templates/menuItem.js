@@ -9,7 +9,7 @@ const MenuItem = ({ title, scrollTo }) => {
       >
         {title}
       </h5>
-      <h1 className='block md:hidden w-full'>{title}</h1>
+      <h2 className='block md:hidden w-full'>{title}</h2>
     </div>
   )
 }
