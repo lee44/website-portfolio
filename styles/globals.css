@@ -50,8 +50,6 @@
   }
 }
 
-:root {}
-
 * {
   box-sizing: border-box;
   padding: 0;
@@ -60,7 +58,7 @@
 
 html,
 body {
-  overflow-x: hidden !important;
+  /* overflow-x: hidden; */
 }
 
 body {
@@ -86,4 +84,8 @@ hr {
 header {
   position: fixed;
   width: 100vw;
+}
+
+.hideScrollbar {
+  overflow: hidden;
 }

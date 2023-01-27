@@ -85,7 +85,7 @@ const Home = () => {
           <Portfolio />
         </section>
       </main>
-      <footer className='container pb-7'>
+      <footer className='container lg:pb-0 pb-7'>
         <section className='' ref={contactRef}>
           <Contact />
         </section>

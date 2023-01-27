@@ -9,9 +9,9 @@ const Nav = ({ menuItems, scrollToHome }) => {
 
   useEffect(() => {
     if (menu) {
-      document.body.style.overflow = 'hidden'
+      document.body.classList.add('hideScrollbar')
     } else {
-      document.body.style.overflow = 'auto'
+      document.body.classList.remove('hideScrollbar')
     }
   }, [menu])
 
