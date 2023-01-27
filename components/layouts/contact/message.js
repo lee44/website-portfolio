@@ -7,8 +7,8 @@ const Message = () => {
       <Card classes={'flex flex-col max-w-lg xl:justify-self-end min-w-0'} animation={'fade-left'}>
         <h3 className='text-primary my-0'>Send Me A Message</h3>
         <hr />
-        <form className='w-full' method='POST' data-netlify='true'>
-          <input type='hidden' name='contact' value='contact' />
+        <form name='contact' className='w-full' method='POST' data-netlify='true'>
+          <input type='hidden' name='form-name' value='contact' />
           <input className='w-full p-2 bg-white rounded-md text-black' placeholder='Name' name='name' type='text' required />
           <input className='w-full p-2 my-3 bg-white rounded-md text-black' placeholder='Email' name='email' type='email' required />
           <textarea className='w-full p-2 bg-white rounded-md text-black' placeholder='Message' name='message' cols={5} rows={5} />
