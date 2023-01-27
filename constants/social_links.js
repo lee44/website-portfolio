@@ -2,7 +2,7 @@ import React from 'react'
 import { FaFacebookSquare, FaTwitterSquare, FaLinkedin, FaGithubSquare } from 'react-icons/fa'
 
 const iconSize = 42
-const iconClasses = 'fill-primary hover:fill-primary-hover basis-[42px]'
+const iconClasses = 'fill-primary hover:fill-primary-hover'
 
 export const socialLinks = {
   facebook: {
