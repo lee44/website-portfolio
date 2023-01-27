@@ -10,7 +10,7 @@ const SocialBar = ({ direction, showLinks }) => {
             {showLinks ? (
               <>
                 {value.icon}
-                <div className='flex-1 min-w-0 break-words '>{value.url}</div>
+                <div className='flex-1 min-w-0 break-words'>{value.url}</div>
               </>
             ) : (
               <>{value.icon}</>
