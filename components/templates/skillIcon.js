@@ -24,9 +24,9 @@ export default function SkillIcon({ name, color }) {
 
   return (
     <>
-      <li className='flex justify-center items-center flex-col'>
+      <li className='flex flex-col items-center justify-center'>
         {icons[name]}
-        <p className='mb-0'>{name}</p>
+        <p className='m-2'>{name}</p>
       </li>
     </>
   )

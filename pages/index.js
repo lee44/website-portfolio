@@ -64,6 +64,7 @@ const Home = () => {
         <title>Joshua Lee</title>
         <meta name='description' content='Website Portfolio' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' type='image/x-icon' href='/resume.png'></link>
       </Head>
 
       <header className='top-0 z-[99] bg-primary-bg'>
@@ -72,7 +73,7 @@ const Home = () => {
       <main className='container'>
         <section className='flex flex-col justify-center' ref={homeRef}>
           <Title />
-          <hr className='h-4 my-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0'></hr>
+          <hr className='h-4 my-8 border-0 bg-gradient-to-r from-violet-500 to-fuchsia-500'></hr>
           <SocialBar direction={'horizontal'} showLinks={false} />
         </section>
         <section className='' ref={aboutRef}>
