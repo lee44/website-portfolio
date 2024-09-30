@@ -24,14 +24,14 @@ const Project = ({ img, title, description, languages, github_url, production_ur
         </div>
         <hr></hr>
         <div className='flex justify-between w-full gap-3'>
-          <a href={github_url} className='py-3 w-32 rounded-md text-center flex-auto bg-button hover:bg-button-hover'>
-            <div className='flex justify-center items-center'>
+          <a href={github_url} className='flex-auto w-32 py-3 text-center rounded-md bg-button hover:bg-button-hover' target='_blank' rel='noreferrer'>
+            <div className='flex items-center justify-center'>
               <FaGithubSquare size={28} className='mr-2' />
               <span>Github</span>
             </div>
           </a>
-          <a href={production_url} className='py-3 w-32 rounded-md text-center flex-auto bg-button hover:bg-button-hover'>
-            <div className='flex justify-center items-center'>
+          <a href={production_url} className='flex-auto w-32 py-3 text-center rounded-md bg-button hover:bg-button-hover' target='_blank' rel='noreferrer'>
+            <div className='flex items-center justify-center'>
               <FaBroadcastTower size={26} className='mr-2' />
               <span>Live</span>
             </div>
