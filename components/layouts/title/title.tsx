@@ -7,7 +7,6 @@ const Title = () => {
         Joshua Lee
       </h1>
       <h6 className='md:text-7xl text-5xl font-black font-[Rockwell]'>
-        Web <br />
         Software <br />
         Developer
       </h6>
