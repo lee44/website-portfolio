@@ -6,9 +6,9 @@ import Contact from '../components/layouts/contact/contact'
 import MenuItem from '../components/templates/menuItem'
 import { useSpring } from 'framer-motion'
 import Portfolio from '../components/layouts/portfolio/portfolio'
-import AboutMe from '../components/layouts/aboutme/aboutme'
 import SocialBar from '../components/layouts/contact/socialbar'
 import Nav from '../components/layouts/nav/navigation'
+import AboutMe from '../components/layouts/aboutme/aboutme'
 
 const Home = () => {
   const spring = useSpring(0, { duration: 0.5 })
@@ -37,7 +37,6 @@ const Home = () => {
     AboutMe: <MenuItem title={'About Me'} scrollTo={scrollToAbout} />,
     Skills: <MenuItem title={'Skills'} scrollTo={scrollToSkills} />,
     Portfolio: <MenuItem title={'Portfolio'} scrollTo={scrollToPortfolio} />,
-    Contact: <MenuItem title={'Contact'} scrollTo={scrollToContact} />,
     Resume: (
       <MenuItem
         title={'Resume'}
@@ -64,6 +63,7 @@ const Home = () => {
         <title>Joshua Lee</title>
         <meta name='description' content='Website Portfolio' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
+        <link rel='icon' type='image/x-icon' href='/resume.png'></link>
       </Head>
 
       <header className='top-0 z-[99] bg-primary-bg'>
@@ -72,7 +72,7 @@ const Home = () => {
       <main className='container'>
         <section className='flex flex-col justify-center' ref={homeRef}>
           <Title />
-          <hr className='h-4 my-8 bg-gradient-to-r from-violet-500 to-fuchsia-500 border-0'></hr>
+          <hr className='h-4 my-8 border-0 bg-gradient-to-r from-violet-500 to-fuchsia-500'></hr>
           <SocialBar direction={'horizontal'} showLinks={false} />
         </section>
         <section className='' ref={aboutRef}>
@@ -85,11 +85,11 @@ const Home = () => {
           <Portfolio />
         </section>
       </main>
-      <footer className='container lg:pb-0 pb-7'>
+      {/* <footer className='container lg:pb-0 pb-7'>
         <section className='' ref={contactRef}>
           <Contact />
         </section>
-      </footer>
+      </footer> */}
     </>
   )
 }

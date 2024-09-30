@@ -17,8 +17,8 @@ module.exports = {
       colors: {
         primary: '#8067ff',
         'primary-hover': '#9782ff',
-        button: '#9733ee',
-        'button-hover': '#a34fec',
+        button: '#c33fd7',
+        'button-hover': '#d946ef',
         'primary-bg': '#00001a',
       },
     },

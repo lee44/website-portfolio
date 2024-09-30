@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from 'react'
 
-const Nav = ({ menuItems, scrollToHome }) => {
+type menuItemsType = {
+  Home: JSX.Element
+  AboutMe: JSX.Element
+  Skills: JSX.Element
+  Portfolio: JSX.Element
+  Resume: JSX.Element
+}
+
+const Nav = ({ menuItems, scrollToHome }: { menuItems: menuItemsType, scrollToHome: () => void }) => {
   const [menu, setMenu] = useState(false)
 
   const toggleMenu = () => {
@@ -17,20 +25,20 @@ const Nav = ({ menuItems, scrollToHome }) => {
 
   return (
     <>
-      <nav className='container h-14 top-0 flex justify-between items-center text-white'>
-        <h2 className='bg-gradient-to-r from-violet-500 to-fuchsia-500 text-transparent bg-clip-text cursor-pointer' onClick={scrollToHome}>
+      <nav className='container top-0 flex items-center justify-between text-white h-14'>
+        <h2 className='text-transparent cursor-pointer bg-gradient-to-r from-violet-500 to-fuchsia-500 bg-clip-text' onClick={scrollToHome}>
           JL
         </h2>
 
         {/* Desktop Menu */}
-        <ol className='hidden md:flex h-full'>
+        <ol className='hidden h-full md:flex'>
           {Object.values(menuItems).map((value, index) => {
             return <li key={index}>{value}</li>
           })}
         </ol>
 
         {/* Mobile Menu */}
-        <div className='md:hidden space-y-2 cursor-pointer' onClick={toggleMenu}>
+        <div className='space-y-2 cursor-pointer md:hidden' onClick={toggleMenu}>
           <span className='block w-4 h-1 bg-gradient-to-r from-violet-500 to-fuchsia-500'></span>
           <span className='block w-8 h-1 bg-gradient-to-r from-violet-500 to-fuchsia-500'></span>
           <span className='block w-4 h-1 ml-auto bg-gradient-to-r from-violet-500 to-fuchsia-500'></span>
@@ -38,9 +46,9 @@ const Nav = ({ menuItems, scrollToHome }) => {
         <div
           className={`${menu ? 'flex' : 'hidden'} flex-col justify-center w-screen h-screen top-0 left-0 px-8 bg-primary-bg z-[99] fixed`}
         >
-          <button type='button' className='text-white rounded-md p-2 flex items-center justify-end' onClick={toggleMenu}>
+          <button type='button' className='flex items-center justify-end p-2 text-white rounded-md' onClick={toggleMenu}>
             <svg
-              className='h-12 w-12'
+              className='w-12 h-12'
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
               viewBox='0 0 24 24'

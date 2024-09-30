@@ -1,7 +1,9 @@
 import React from 'react'
-import { FaAndroid, FaBootstrap, FaCss3, FaGithub, FaHtml5, FaJava, FaPython, FaReact, FaSass } from 'react-icons/fa'
+import { FaAndroid, FaBootstrap, FaCss3, FaGithub, FaHtml5, FaJava, FaPython, FaReact, FaSass, } from 'react-icons/fa'
 import { DiPhotoshop } from 'react-icons/di'
 import { SiJquery, SiMysql, SiJavascript } from 'react-icons/si'
+import { SiTailwindcss } from 'react-icons/si'
+
 
 export default function SkillIcon({ name, color }) {
   const size = 42
@@ -14,6 +16,7 @@ export default function SkillIcon({ name, color }) {
     Bootstrap: <FaBootstrap size={size} color={color} />,
     MySQL: <SiMysql size={size} color={color} />,
     'Crystal Reports': <FaHtml5 size={size} color={color} />,
+    TailwindCSS: <SiTailwindcss size={size} color={color} />,
     Java: <FaJava size={size} color={color} />,
     Android: <FaAndroid size={size} color={color} />,
     Python: <FaPython size={size} color={color} />,
@@ -24,9 +27,9 @@ export default function SkillIcon({ name, color }) {
 
   return (
     <>
-      <li className='flex justify-center items-center flex-col'>
+      <li className='flex flex-col items-center justify-center'>
         {icons[name]}
-        <p className='mb-0'>{name}</p>
+        <p className='m-2'>{name}</p>
       </li>
     </>
   )

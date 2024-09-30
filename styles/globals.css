@@ -58,20 +58,6 @@
   scrollbar-color: #8067ff #00001a;
 }
 
-*::-webkit-scrollbar {
-  width: 12px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #00001a;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #8067ff;
-  border-radius: 20px;
-  border: 3px solid #8067ff;
-}
-
 html,
 body {
   /* overflow-x: hidden; */
