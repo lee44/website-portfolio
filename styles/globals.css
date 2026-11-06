@@ -60,12 +60,15 @@
 
 html,
 body {
-  /* overflow-x: hidden; */
+  min-height: 100%;
 }
 
 body {
-  background: url("../public/sitebg.jpg") no-repeat center fixed;
-  background-size: cover;
+  background-image: url("../public/sitebg.jpg");
+  background-repeat: repeat-y;
+  background-position: center top;
+  background-attachment: scroll;
+  background-size: 100% auto;
   color: white;
 }
 
