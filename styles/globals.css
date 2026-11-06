@@ -63,12 +63,16 @@ body {
   min-height: 100%;
 }
 
-body {
+html {
+  background-color: #00001a;
   background-image: url("../public/sitebg.jpg");
   background-repeat: repeat-y;
   background-position: center top;
-  background-attachment: scroll;
   background-size: 100% auto;
+}
+
+body {
+  background: transparent;
   color: white;
 }
 
