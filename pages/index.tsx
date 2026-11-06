@@ -17,7 +17,6 @@ const Home = () => {
   const aboutRef = useRef(null)
   const skillsRef = useRef(null)
   const portfolioRef = useRef(null)
-  const contactRef = useRef(null)
 
   function moveTo(ref) {
     spring.set(ref.current?.offsetTop)
@@ -27,7 +26,6 @@ const Home = () => {
   const scrollToAbout = () => moveTo(aboutRef)
   const scrollToSkills = () => moveTo(skillsRef)
   const scrollToPortfolio = () => moveTo(portfolioRef)
-  const scrollToContact = () => moveTo(contactRef)
 
   /* 
     Composition to prevent prop drilling and re-render of MenuItem Component because passing MenuItem as a prop is not rerendered
@@ -85,11 +83,6 @@ const Home = () => {
           <Portfolio />
         </section>
       </main>
-      {/* <footer className='container lg:pb-0 pb-7'>
-        <section className='' ref={contactRef}>
-          <Contact />
-        </section>
-      </footer> */}
     </>
   )
 }
