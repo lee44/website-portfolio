@@ -8,7 +8,7 @@ const Project = ({ img, title, description, languages, github_url, production_ur
     <li className='flex justify-center'>
       <Card classes={'flex flex-col h-full max-w-md'} animation={animation}>
         <div className='relative w-full md:h-56 h-44'>
-          <Image className='rounded-md' src={img} alt={description} fill sizes='min-width: 100%;' />
+          <Image className='rounded-md' src={img} alt={description} fill sizes='100vw' unoptimized />
         </div>
         <h3>{title}</h3>
         <p className='xl:min-h-fit md:min-h-[72px] my-0'>{description}</p>
