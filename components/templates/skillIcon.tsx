@@ -6,7 +6,7 @@ import { SiTailwindcss } from 'react-icons/si'
 
 
 export default function SkillIcon({ name, color }) {
-  const size = 42
+  const size = 32
   const icons = {
     HTML5: <FaHtml5 size={size} color={color} />,
     CSS: <FaCss3 size={size} color={color} />,
@@ -68,8 +68,8 @@ export default function SkillIcon({ name, color }) {
   return (
     <>
       <li className='flex flex-col items-center justify-center'>
-        {icons[name] || <span className='flex h-[42px] w-[42px] items-center justify-center rounded-full border text-xs font-bold'>SK</span>}
-        <p className='m-2'>{name}</p>
+        {icons[name] || <span className='flex h-8 w-8 items-center justify-center rounded-full border text-[10px] font-bold'>SK</span>}
+        <p className='m-1 text-sm'>{name}</p>
       </li>
     </>
   )

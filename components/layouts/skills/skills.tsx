@@ -37,7 +37,6 @@ export default function Skills() {
       skills: [
         'Azure App Service',
         'Azure Functions',
-        'Azure Blob Storage',
         'Azure Cosmos DB',
         'Azure SQL Database',
         'Azure API Management',
@@ -74,11 +73,11 @@ export default function Skills() {
   return (
     <>
       <SubTitle subtitle={'Skills'} />
-      <Card classes={''} animation={'fade-up'}>
+      <Card classes={'grid grid-cols-1 gap-4 md:grid-cols-2'} animation={'fade-up'}>
         {skillGroups.map((group) => (
-          <div key={group.name} className='mb-8 last:mb-0'>
-            <h3 className='mb-6 text-xl font-semibold text-center'>{group.name}</h3>
-            <ul className='grid grid-cols-2 gap-x-4 gap-y-0 xl:grid-cols-6 lg:grid-cols-4 md:grid-cols-3'>
+          <div key={group.name} className='p-4 border rounded-lg border-primary'>
+            <h3 className='mb-4 text-lg font-semibold text-center'>{group.name}</h3>
+            <ul className='grid grid-cols-2 gap-x-4 gap-y-2 lg:grid-cols-4 md:grid-cols-3'>
               {group.skills.map((skill) => (
                 <SkillIcon key={skill} name={skill} color={''} />
               ))}
